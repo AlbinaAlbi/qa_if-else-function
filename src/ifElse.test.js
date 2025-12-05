@@ -16,6 +16,7 @@ describe('ifElse', () => {
 
     expect(condition).toHaveBeenCalled();
     expect(first).toHaveBeenCalled();
+    expect(second).not.toHaveBeenCalled();
   });
 
   it('should call "second" if condition returns false', () => {
@@ -26,6 +27,7 @@ describe('ifElse', () => {
     ifElse(condition, first, second);
 
     expect(condition).toHaveBeenCalled();
+    expect(first).not.toHaveBeenCalled();
     expect(second).toHaveBeenCalled();
   });
 });
